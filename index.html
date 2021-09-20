@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Survey Form</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
- <h1 id="title">Microverse Survey Form</h1>   
- <p id="description" >
-   Thank you for taking time to participate in the survey.
- </p>
-    <script  src="js/index.js"></script>
+    <h1 id="title">Microverse Survey Form</h1>
+    <p id="description">
+      Thank you for taking time to participate in the survey.
+    </p>
+    <form id="survey-form">
+      <label id="name-label" for="name">Name</label>
+      <input placeholder="User name" id="name" type="text" required />
+      <label id="email-label" for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+        required
+        placeholder="User email"
+      />
+      <label id="number-label" for="number">Number</label>
+      <input
+        placeholder="User age"
+        id="number"
+        type="number"
+        min="10"
+        max="99"
+      />
+    </form>
+    <script src="js/index.js"></script>
   </body>
 </html>
